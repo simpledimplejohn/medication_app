@@ -1,0 +1,24 @@
+<!-- app/templates/potato.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Potato Form</title>
+</head>
+<body>
+    <h1>Potato Form</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Submit</button>
+    </form>
+
+    {% if form.is_bound %}
+        <h2>Form Data:</h2>
+        <p>Potato Name: {{ form.cleaned_data.potato_name }}</p>
+        <p>Potato Description: {{ form.cleaned_data.potato_description }}</p>
+        <p>Potato Number: {{ form.cleaned_data.potato_number }}</p>
+        <p>Is Potato: {{ form.cleaned_data.is_potato }}</p>
+    {% endif %}
+</body>
+</html>
