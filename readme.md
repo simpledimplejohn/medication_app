@@ -1,6 +1,4 @@
 # Notes on what I (Drew) Added
-
- - added 4 lines in "Potato.html"
  - added directory/file "app\static\css\styles.css"
 
 
