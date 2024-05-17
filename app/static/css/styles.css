@@ -1,0 +1,75 @@
+body {
+    background-color: #2c2c2c;  /* Dark grey background */
+    color: #ffffff;  /* White text color */
+    font-family: Arial, sans-serif;
+}
+
+h1 {
+    color: #00ff00;  /* Medium green for headings */
+    text-shadow: 2px 2px #000000;  /* Black shadow for headings */
+}
+
+form {
+    background-color: #3c3c3c;  /* Slightly lighter grey for form background */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  /* Subtle shadow */
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="number"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #d3d3d3;  /* Light grey background for text boxes */
+    color: #000000;  /* Black text color */
+}
+
+button {
+    background-color: #00ff00;  /* Medium green for buttons */
+    color: #2c2c2c;  /* Dark grey for button text */
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #00cc00;  /* Darker green for button hover */
+}
+
+/* Additional styling for form data */
+.form-data {
+    background-color: #444;  /* Dark grey background */
+    padding: 15px;
+    border-radius: 10px;
+    margin-top: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  /* Subtle shadow */
+}
+
+.form-data h2 {
+    color: #00ff00;  /* Medium green for subheadings */
+    text-shadow: 2px 2px #000000;  /* Black shadow */
+}
+
+.form-data-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 15px;
+}
+
+.form-data-table td {
+    background-color: #555;  /* Slightly lighter grey for table cells */
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  /* Subtle shadow */
+}

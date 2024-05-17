@@ -1,0 +1,75 @@
+body {
+    background-color: #1a1a1a;  /* Very dark grey background */
+    color: #ffffff;  /* White text color */
+    font-family: 'Georgia', serif;
+}
+
+h1 {
+    color: #ff6347;  /* Tomato red for headings */
+    text-shadow: 2px 2px #000000;  /* Black shadow for headings */
+}
+
+form {
+    background-color: #2e2e2e;  /* Slightly lighter grey for form background */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);  /* More pronounced shadow */
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="number"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #b0c4de;  /* Light steel blue background for text boxes */
+    color: #000000;  /* Black text color */
+}
+
+button {
+    background-color: #ff6347;  /* Tomato red for buttons */
+    color: #ffffff;  /* White text color */
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #ee5a4f;  /* Darker tomato red for button hover */
+}
+
+/* Additional styling for form data */
+.form-data {
+    background-color: #3b3b3b;  /* Dark grey background */
+    padding: 15px;
+    border-radius: 10px;
+    margin-top: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);  /* More pronounced shadow */
+}
+
+.form-data h2 {
+    color: #ff6347;  /* Tomato red for subheadings */
+    text-shadow: 2px 2px #000000;  /* Black shadow */
+}
+
+.form-data-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 15px;
+}
+
+.form-data-table td {
+    background-color: #4b4b4b;  /* Slightly lighter grey for table cells */
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);  /* More pronounced shadow */
+}

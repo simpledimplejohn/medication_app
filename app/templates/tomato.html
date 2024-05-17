@@ -1,9 +1,11 @@
 <!-- app/templates/tomato.html -->
+{% load static %}<!---added-->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Tomato Form</title>
+    <link rel="stylesheet" href="{% static 'css/tomato_styles.css' %}"><!---added-->
 </head>
 <body>
     <h1>Tomato Form</h1>
@@ -20,11 +22,19 @@
     </form>
 
     {% if tomato_name %}
-        <h2>Form Data:</h2>
-        <p>Tomato Name: {{ tomato_name }}</p>
-        <p>Tomato Description: {{ tomato_description }}</p>
-        <p>Tomato Number: {{ tomato_number }}</p>
-        <p>Is Tomato: {{ is_tomato }}</p>
+        <div class="form-data"><!---added-->
+            <h2>Form Data:</h2>
+            <table class="form-data-table"><!---added-->
+                <tr><!---added-->
+                    <td>Tomato Name: {{ tomato_name }}</td><!--changed "<p>" tag to "<td>" for table-->
+                    <td>Tomato Description: {{ tomato_description }}</td><!--changed "<p>" tag to "<td>" for table-->
+                </tr><!---added-->
+                <tr><!---added-->
+                    <td>Tomato Number: {{ tomato_number }}</td><!--changed "<p>" tag to "<td>" for table-->
+                    <td>Is Tomato: {{ is_tomato }}</td><!--changed "<p>" tag to "<td>" for table-->
+                </tr><!---added-->
+            </table><!---added-->
+        </div><!---added-->
     {% endif %}
 </body>
 </html>

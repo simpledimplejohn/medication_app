@@ -1,9 +1,11 @@
 <!-- app/templates/potato.html -->
+{% load static%} <!---added-->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Potato Form</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}"> <!--added-->
 </head>
 <body>
     <h1>Potato Form</h1>
@@ -14,11 +16,19 @@
     </form>
 
     {% if form.is_bound %}
-        <h2>Form Data:</h2>
-        <p>Potato Name: {{ form.cleaned_data.potato_name }}</p>
-        <p>Potato Description: {{ form.cleaned_data.potato_description }}</p>
-        <p>Potato Number: {{ form.cleaned_data.potato_number }}</p>
-        <p>Is Potato: {{ form.cleaned_data.is_potato }}</p>
+        <div class="form-data"><!--added-->
+            <h2>Form Data:</h2>
+            <table class="form-data-table"><!--added-->
+                <tr><!--added-->
+                    <td>Potato Name: {{ form.cleaned_data.potato_name }}</td><!--changed "<p>" tag to "<td>" for table-->
+                    <td>Potato Description: {{ form.cleaned_data.potato_description }}</td><!--changed "<p>" tag to "<td>" for table-->
+                </tr><!--added-->
+                <tr><!--added-->
+                    <td>Potato Number: {{ form.cleaned_data.potato_number }}</td><!--changed "<p>" tag to "<td>" for table-->
+                    <td>Is Potato: {{ form.cleaned_data.is_potato }}</td><!--changed "<p>" tag to "<td>" for table-->
+                </tr><!--added-->
+            </table><!--added-->
+        </div><!--added-->
     {% endif %}
 </body>
 </html>

@@ -1,3 +1,9 @@
+# Notes on what I (Drew) Added
+
+ - added 4 lines in "Potato.html"
+ - added directory/file "app\static\css\styles.css"
+
+
 # Django Forms
 This app is a place to try out different ways of writing forms
 
