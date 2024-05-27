@@ -1,0 +1,19 @@
+<!-- medication_app/templates/medication_app/home.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Medication Logger</title>
+</head>
+<body>
+    <h1>Medication Logger</h1>
+    <form method="post" action="{% url 'medication_app:log_medication' 'Tylenol' '500mg' %}">
+        {% csrf_token %}
+        <button type="submit">Log Tylenol</button>
+    </form>
+    <form method="post" action="{% url 'medication_app:log_medication' 'Ibuprofen' '200mg' %}">
+        {% csrf_token %}
+        <button type="submit">Log Ibuprofen</button>
+    </form>
+</body>
+</html>
