@@ -22,6 +22,9 @@
         button:hover {
             background-color: #0056b3;
         }
+        form {
+            margin: 10px 0;
+        }
     </style>
 </head>
 <body>
@@ -42,11 +45,28 @@
             <button type="submit" style="background-color: #FF0000;">Clear History</button>
         </form>
     </p>
+    {% if show_manual_form.Tylenol %}
+    <form method="post" action="{% url 'medication_app:manual_event' %}">
+        {% csrf_token %}
+        {{ manual_event_form.as_p }}
+        <input type="hidden" name="medication_name" value="Tylenol">
+        <button type="submit">Submit Tylenol Event</button>
+    </form>
+    {% endif %}
+    
     <p>Ibuprofen: {{ ibuprofen_count }} <br>Last Logged: {{ ibuprofen_last_timestamp|date:"l F jS g:i a" }} <br>Next Dose: {{ ibuprofen_next_dose|date:"l F jS g:i a" }}
         <form method="post" action="{% url 'medication_app:clear_history' 'Ibuprofen' %}" style="display: inline;">
             {% csrf_token %}
             <button type="submit" style="background-color: #FF0000;">Clear History</button>
         </form>
     </p>
+    {% if show_manual_form.Ibuprofen %}
+    <form method="post" action="{% url 'medication_app:manual_event' %}">
+        {% csrf_token %}
+        {{ manual_event_form.as_p }}
+        <input type="hidden" name="medication_name" value="Ibuprofen">
+        <button type="submit">Submit Ibuprofen Event</button>
+    </form>
+    {% endif %}
 </body>
 </html>

@@ -2,11 +2,11 @@
  - added directory/file "app\static\css\styles.css"
 
 
-# Django Forms
-This app is a place to try out different ways of writing forms
-
-## Creating forms with django
-
+## Azure Apps 
+Deploy this using
+- Visual Studio Code
+- Azure Apps
+- Github
 
 ## Use this reposiotry
 1. Clone the repository
