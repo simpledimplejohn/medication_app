@@ -17,7 +17,12 @@ This app is a place to try out different ways of writing forms
     API_KEY=
     LOG_LEVEL=debug
     ```
-3. add a .gitignore file
+3. migrate the database
+    ```
+    python manage.py makemigrations
+    python manage.py migrate
+    ```
+    
 4. run
     `python3 manage.py runserver 8000`
 

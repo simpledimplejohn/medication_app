@@ -1,8 +1,17 @@
+# medication_app/views.py
 from django.shortcuts import render, redirect
-from decouple import config
-from django.http import HttpResponse
+from django.utils import timezone
+from .models import MedicationEvent
 
-# Create your views here.
-def medication_app(request):
+def log_medication(request, medication_name, dosage):
+    if request.method == "POST":
+        MedicationEvent.objects.create(
+            medication_name=medication_name,
+            dosage=dosage,
+            timestamp=timezone.now()
+        )
+        return redirect('medication_app:home')
+    return redirect('medication_app:home')
 
-    return render(request, "medication_app.html", {"name":"medication app"})
+def home(request):
+    return render(request, 'medication_app/home.html')
