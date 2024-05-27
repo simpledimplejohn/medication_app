@@ -28,8 +28,7 @@ DEBUG = config('DEBUG')
 
 ALLOWED_HOSTS = []
 
-SECRET_POTATO = config('SECRET_POTATO')
-print('the SECRET_POTATO is: ',SECRET_POTATO)
+
 
 
 # Application definition
@@ -42,6 +41,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'app',
+    'medication_app'
 ]
 
 MIDDLEWARE = [
