@@ -19,10 +19,10 @@ This app is a place to try out different ways of writing forms
     ```
 3. migrate the database
     ```
-    python manage.py makemigrations
-    python manage.py migrate
+    python3 manage.py makemigrations
+    python3 manage.py migrate
     ```
-    
+
 4. run
     `python3 manage.py runserver 8000`
 
